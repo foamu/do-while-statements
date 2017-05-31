@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class App2 {
+
+	public static void main(String[] args) {
+		
+		Scanner question = new Scanner(System.in);
+		
+		String georgeWashington = new String("Washington");
+		String userInput = new String();
+		
+		do {
+			System.out.println("What was the last name of the 1st President of the United States?");
+			userInput = question.nextLine();
+			
+			if(!userInput.equals(georgeWashington)) {
+				System.out.println("Try again.");
+			}
+		}
+		while (!userInput.equalsIgnoreCase(georgeWashington));
+		
+		question.close();
+		
+		System.out.println("Correct. 100%!");
+	}
+
+}
